@@ -14,7 +14,7 @@ spec:
         app: kube-practice
     spec:
       containers:
-        - image: kube-practice
+        - image: fordevelop/kube-practice
           name: kube-practice
           ports:
             - containerPort: 8080
