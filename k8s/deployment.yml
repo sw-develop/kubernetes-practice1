@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube-practice
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: kube-practice
+  template:
+    metadata:
+      labels:
+        app: kube-practice
+    spec:
+      containers:
+        - image: kube-practice
+          name: kube-practice
+          ports:
+            - containerPort: 8080
